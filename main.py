@@ -34,7 +34,6 @@ def predictRouteClient():
             path = request.json['filepath']
 
             pred_val = pred_validation(path)  # object initialization
-
             pred_val.prediction_validation()  # calling the prediction_validation function
 
             pred = prediction(path)  # object initialization
@@ -89,7 +88,6 @@ def trainRouteClient():
         return Response("Error Occurred! %s" % ValueError)
 
     except KeyError:
-
         return Response("Error Occurred! %s" % KeyError)
     except Exception as e:
         return Response("Error Occurred! %s" % e)
